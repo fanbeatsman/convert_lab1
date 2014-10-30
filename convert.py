@@ -16,7 +16,7 @@ for a_file in list_of_files:
 	extension_correction = list_of_files[a_file]
 	extension_correction=extension_correction[:-4]
 	extension_correction=extension_correction+".tif"
-	command="bfconvert.bat -overwrite " + list_of_files[a_file] + " " + extension_correction
+	command="bfconvert.bat -overwrite \"" + list_of_files[a_file] + "\"  \"" + extension_correction +"\""
 	p=Popen(command)
 	#os.system(command)
 
